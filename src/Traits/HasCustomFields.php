@@ -1,11 +1,11 @@
 <?php
 
-namespace Givebutter\LaravelCustomFields\Traits;
+namespace Birdboar\LaravelCustomFields\Traits;
 
-use Givebutter\LaravelCustomFields\Exceptions\FieldDoesNotBelongToModelException;
-use Givebutter\LaravelCustomFields\Exceptions\WrongNumberOfFieldsForOrderingException;
-use Givebutter\LaravelCustomFields\Models\CustomField;
-use Givebutter\LaravelCustomFields\Validators\CustomFieldValidator;
+use Birdboar\LaravelCustomFields\Exceptions\FieldDoesNotBelongToModelException;
+use Birdboar\LaravelCustomFields\Exceptions\WrongNumberOfFieldsForOrderingException;
+use Birdboar\LaravelCustomFields\Models\CustomField;
+use Birdboar\LaravelCustomFields\Validators\CustomFieldValidator;
 use Illuminate\Http\Request;
 
 trait HasCustomFields

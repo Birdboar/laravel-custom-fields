@@ -1,12 +1,12 @@
 <?php
 
-namespace Givebutter\Tests\Feature;
+namespace Birdboar\Tests\Feature;
 
-use Givebutter\LaravelCustomFields\Models\CustomField;
-use Givebutter\LaravelCustomFields\Models\CustomFieldResponse;
-use Givebutter\Tests\Support\Survey;
-use Givebutter\Tests\Support\SurveyResponse;
-use Givebutter\Tests\TestCase;
+use Birdboar\LaravelCustomFields\Models\CustomField;
+use Birdboar\LaravelCustomFields\Models\CustomFieldResponse;
+use Birdboar\Tests\Support\Survey;
+use Birdboar\Tests\Support\SurveyResponse;
+use Birdboar\Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class HasCustomFieldResponsesTest extends TestCase

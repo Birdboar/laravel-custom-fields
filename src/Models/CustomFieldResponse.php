@@ -1,6 +1,6 @@
 <?php
 
-namespace Givebutter\LaravelCustomFields\Models;
+namespace Birdboar\LaravelCustomFields\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

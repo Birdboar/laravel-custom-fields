@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Givebutter\\LaravelCustomFields\\": "src/"
+            "Birdboar\\LaravelCustomFields\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Givebutter\\Tests\\": "tests/",
+            "Birdboar\\Tests\\": "tests/",
             "Database\\": "database/"
         }
     },
@@ -52,7 +52,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Givebutter\\LaravelCustomFields\\LaravelCustomFieldsServiceProvider"
+                "Birdboar\\LaravelCustomFields\\LaravelCustomFieldsServiceProvider"
             ]
         }
     }

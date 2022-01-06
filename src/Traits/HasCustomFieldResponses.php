@@ -1,9 +1,9 @@
 <?php
 
-namespace Givebutter\LaravelCustomFields\Traits;
+namespace Birdboar\LaravelCustomFields\Traits;
 
-use Givebutter\LaravelCustomFields\Models\CustomField;
-use Givebutter\LaravelCustomFields\Models\CustomFieldResponse;
+use Birdboar\LaravelCustomFields\Models\CustomField;
+use Birdboar\LaravelCustomFields\Models\CustomFieldResponse;
 
 trait HasCustomFieldResponses
 {

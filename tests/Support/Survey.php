@@ -1,8 +1,8 @@
 <?php
 
-namespace Givebutter\Tests\Support;
+namespace Birdboar\Tests\Support;
 
-use Givebutter\LaravelCustomFields\Traits\HasCustomFields;
+use Birdboar\LaravelCustomFields\Traits\HasCustomFields;
 use Illuminate\Database\Eloquent\Model;
 
 class Survey extends Model

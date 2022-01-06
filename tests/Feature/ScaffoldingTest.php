@@ -1,8 +1,8 @@
 <?php
 
-namespace Givebutter\Tests\Feature;
+namespace Birdboar\Tests\Feature;
 
-use Givebutter\Tests\TestCase;
+use Birdboar\Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 

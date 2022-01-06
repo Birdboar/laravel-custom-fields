@@ -1,6 +1,6 @@
 <?php
 
-namespace Givebutter\LaravelCustomFields\Models;
+namespace Birdboar\LaravelCustomFields\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

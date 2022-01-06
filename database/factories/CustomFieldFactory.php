@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Exception;
 use Faker\Provider\Lorem;
-use Givebutter\LaravelCustomFields\Models\CustomField;
+use Birdboar\LaravelCustomFields\Models\CustomField;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CustomFieldFactory extends Factory

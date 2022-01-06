@@ -16,7 +16,7 @@ composer require givebutter/laravel-custom-fields
 
 Publish the migration:
 ```bash
-php artisan vendor:publish --provider="Givebutter\LaravelCustomFields\LaravelCustomFieldsServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Birdboar\LaravelCustomFields\LaravelCustomFieldsServiceProvider" --tag="migrations"
 ```
 
 Run the migration:
@@ -37,7 +37,7 @@ To add basic custom field support, simply add the `HasCustomFields` trait at the
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use Givebutter\LaravelCustomFields\Traits\HasCustomFields;
+use Birdboar\LaravelCustomFields\Traits\HasCustomFields;
 
 class Survey extends Model
 {
@@ -53,7 +53,7 @@ Next, we add support to store custom field responses. We'll simply pull in the `
 
 ```php
 use Illuminate\Database\Eloquent\Model;
-use Givebutter\LaravelCustomFields\Traits\HasCustomFieldResponses;
+use Birdboar\LaravelCustomFields\Traits\HasCustomFieldResponses;
 
 class SurveyResponse extends Model
 {
@@ -82,7 +82,7 @@ Each field can contain the following: (More on these later)
 `description` :  The description of your field. Useful for providing more context to user filling out fields.
 `type` :  The type of field you're creating. Available types are outlined in the next section.
 `required` :  A boolean representing whether a field is required or not.
-`answers` : An array of acceptable values for fields that have user-selection. 
+`answers` : An array of acceptable values for fields that have user-selection.
 
 ### Creating field responses
 
@@ -127,7 +127,7 @@ In general, these field types correspond to their respective HTML elements. In t
  $survey->customFields()->create([
     'title' => 'What is your favorite color?',
     'type' => 'select',
-    'answers' => ['Red', 'Green', 'Blue', 'Yellow'], 
+    'answers' => ['Red', 'Green', 'Blue', 'Yellow'],
 ]);
 ```
 
@@ -154,7 +154,7 @@ use Request;
 
 class FooController extends Controller {
 
-    public function index(Request $request) 
+    public function index(Request $request)
     {
         $validation = $survey->validateCustomFields($request);
 
@@ -169,7 +169,7 @@ class FooController extends Controller {
     <input type="text" name="custom_fields[]" />
 </form>
 ```
-When using a `Request` object, the input key should be an array of values 
+When using a `Request` object, the input key should be an array of values
 
 
 
@@ -215,7 +215,7 @@ Remember, the `validation_rules` supports any of the [available validation rules
 
 ### Validation Rule Sets
 -> nah?
-In some cases, it's easier and more practical to define validation rules sets. For example, in our Survey app, if we wanted to offer a 
+In some cases, it's easier and more practical to define validation rules sets. For example, in our Survey app, if we wanted to offer a
 
 ## Saving Responses
 
@@ -225,7 +225,7 @@ The `saveCustomFields` function can take in a Request or array.
 
 ```php
 $surveyResponse->saveCustomFields(['
-   
+
 ']);
 ```
 
@@ -246,14 +246,14 @@ For example, if you wanted to find all `SurveyResponses` with a `large` T-shirt 
 Use App\Models\SurveyResponse;
 Use App\Models\SurveyResponse;
 
-$field = 
+$field =
 
 SurveyResponse::WhereCustomField($field, 'large')->get();
 ```
 
 ## Ordering
 
-You can change the order of custom fields on a model by using the `order` function. Pass in either an array or `Collection` of ids. The index position of the field represent the order position of it. 
+You can change the order of custom fields on a model by using the `order` function. Pass in either an array or `Collection` of ids. The index position of the field represent the order position of it.
 
 ```php
 $survey->orderCustomFields([2, 4, 5]); // Field with id 2 will be ordered first.
@@ -262,7 +262,7 @@ $survey->orderCustomFields([2, 4, 5]); // Field with id 2 will be ordered first.
 You can also manually change the value of the `order` column:
 
 ```php
-$field->order = 3; 
+$field->order = 3;
 $field->save();
 ```
 
@@ -275,7 +275,7 @@ $survey->customFields()->get(); // Returned in ascending order.
 
 To publish the configuration file, run the following command:
 ```bash
-php artisan vendor:publish --provider="Givebutter\LaravelCustomFields\LaravelCustomFieldsServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Birdboar\LaravelCustomFields\LaravelCustomFieldsServiceProvider" --tag="config"
 ```
 
 The configuration file should now be published in `config/custom-fields.php`. The available options and their usage are explained inside the published file.
